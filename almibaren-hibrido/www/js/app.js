@@ -35,54 +35,87 @@ angular.module('starter', ['ionic', 'starter.controllers'])
     templateUrl: 'templates/menu.html',
     controller: 'AppCtrl'
   })
-
-  .state('app.search', {
-    url: '/search',
+  .state('app.inicio', {
+    url: '/inicio',
     views: {
       'menuContent': {
-        templateUrl: 'templates/search.html'
+        templateUrl: 'templates/inicio.html',
+        controller: 'InicioCtrl'
       }
     }
   })
-
-  .state('app.browse', {
-      url: '/browse',
-      views: {
-        'menuContent': {
-          templateUrl: 'templates/browse.html'
-        }
-      }
-    })
-    .state('app.playlists', {
-      url: '/playlists',
-      views: {
-        'menuContent': {
-          templateUrl: 'templates/playlists.html',
-          controller: 'PlaylistsCtrl'
-        }
-      }
-    })
     .state('app.juegos', {
       url: '/juegos',
       views: {
         'menuContent': {
-          templateUrl: 'templates/playlists.html',
-          controllerUrl: 'js/Controladores/ControllerJuegos.js',
-          controller: 'JuegosCtrl',
-          //controllerUrl: 'Controladores/ControllerJuegos.js'
+          templateUrl: 'templates/juegos.html',
+          controller: 'JuegosCtrl'
         }
       }
     })
-
-  .state('app.single', {
-    url: '/playlists/:playlistId',
-    views: {
-      'menuContent': {
-        templateUrl: 'templates/playlist.html',
-        controller: 'PlaylistCtrl'
+    .state('app.acerca', {
+      url: '/acerca',
+      views: {
+        'menuContent': {
+          templateUrl: 'templates/acerca.html',
+          controller: 'AcercaCtrl'
+        }
       }
-    }
-  });
+    })
+    .state('app.ajustes', {
+      url: '/ajustes',
+      views: {
+        'menuContent': {
+          templateUrl: 'templates/ajustes.html',
+          controller: 'AjustesCtrl'
+        }
+      }
+    })
+    .state('app.consolas', {
+      url: '/consolas',
+      views: {
+        'menuContent': {
+          templateUrl: 'templates/consolas.html',
+          controller: 'ConsolasCtrl'
+        }
+      }
+    })
+    .state('app.servicio', {
+      url: '/servicio',
+      views: {
+        'menuContent': {
+          templateUrl: 'templates/servicio.html',
+          controller: 'ServicioCtrl'
+        }
+      }
+    })
+    .state('app.sesion', {
+      url: '/sesion',
+      views: {
+        'menuContent': {
+          templateUrl: 'templates/sesion.html',
+          controller: 'SesionCtrl'
+        }
+      }
+    })
+    .state('app.smart', {
+      url: '/smart',
+      views: {
+        'menuContent': {
+          templateUrl: 'templates/smart.html',
+          controller: 'SmartCtrl'
+        }
+      }
+    })
+    .state('app.ubicacion', {
+      url: '/ubicacion',
+      views: {
+        'menuContent': {
+          templateUrl: 'templates/ubicacion.html',
+          controller: 'UbicacionCtrl'
+        }
+      }
+    });
   // if none of the above states are matched, use this as the fallback
-  $urlRouterProvider.otherwise('/app/playlists');
+  $urlRouterProvider.otherwise('/app/inicio');
 });
