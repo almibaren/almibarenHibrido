@@ -1,12 +1,19 @@
 angular.module('starter.controllers')
 
 .controller('InicioCtrl', function($scope) {
-  $scope.playlists = [
-    { title: 'Reggae', id: 1 },
-    { title: 'Chill', id: 2 },
-    { title: 'Dubstep', id: 3 },
-    { title: 'Indie', id: 4 },
-    { title: 'Rap', id: 5 },
-    { title: 'Cowbell', id: 6 }
-  ];
+/*  Cursos.getCursos().then(function(response){
+    _this.cursos=response.data;
+  });*/
+  $scope.sliderOptions = {
+          effect: 'slide',
+          paginationHide: true,
+          initialSlide: 0,
+          onInit: function(swiper){
+              $scope.swiper = swiper;
+          },
+          onSlideChangeEnd: function(swiper){
+              // ....
+          }
+      };
+
 })

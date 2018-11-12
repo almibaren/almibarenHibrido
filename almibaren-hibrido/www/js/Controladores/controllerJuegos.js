@@ -1,6 +1,9 @@
 angular.module('starter.controllers')
 
-.controller('JuegosCtrl', function($scope) {
+.controller('JuegosCtrl',['$scope','$rootScope','$state','$ionicHistory', function($scope,$rootScope,$state,$ionicHistory) {
+
+}])
+.controller('TabsCtrl', function($scope) {
   $scope.playlists = [
     { title: 'Reggae', id: 1 },
     { title: 'Chill', id: 2 },
