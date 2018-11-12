@@ -98,6 +98,15 @@ angular.module('starter', ['ionic', 'starter.controllers','starter.services'])
         }
       }
     })
+    .state('app.login', {
+      url: '/login',
+      views: {
+        'menuContent': {
+          templateUrl: 'templates/login.html',
+          controller: 'LoginCtrl'
+        }
+      }
+    })
     .state('app.smart', {
       url: '/smart',
       views: {

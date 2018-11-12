@@ -1,25 +1,24 @@
-<ion-modal-view>
-  <ion-header-bar>
-    <h1 class="title">Login</h1>
-    <div class="buttons">
-      <button class="button button-clear" ng-click="closeLogin()">Close</button>
+<ion-view title="Login" id="page3" style="">
+  <ion-content padding="true" class="has-header">
+    <h1 id="login-heading2" style="color:#000000;text-align:center;">Almi</h1>
+    <div id="login-markdown2" class="show-list-numbers-and-dots">
+      <p style="margin-top:0px;color:#000000;">Usuario:</p>
     </div>
-  </ion-header-bar>
-  <ion-content>
-    <form ng-submit="doLogin()">
-      <div class="list">
-        <label class="item item-input">
-          <span class="input-label">Username</span>
-          <input type="text" ng-model="loginData.username">
-        </label>
-        <label class="item item-input">
-          <span class="input-label">Password</span>
-          <input type="password" ng-model="loginData.password">
-        </label>
-        <label class="item">
-          <button class="button button-block button-positive" type="submit">Log in</button>
-        </label>
-      </div>
+    <form id="login-form3" class="list" >
+      <label class="item item-input" id="login-input3">
+        <span class="input-label">User</span>
+        <input type="text" placeholder="" ng-model="alumno.user">
+      </label>
     </form>
+    <div id="login-markdown3" class="show-list-numbers-and-dots">
+      <p style="margin-top:0px;color:#000000;" ">Password:</p>
+    </div>
+    <form id="login-form4" class="list">
+      <label class="item item-input" id="login-input4">
+        <span class="input-label" >Pass</span>
+        <input type="text" placeholder="" ng-model="alumno.pass">
+      </label>
+    </form>
+    <button id="login-button2" class="button button-positive button-block" ng-click="modificar()">Entrar</button>
   </ion-content>
-</ion-modal-view>
+</ion-view>
