@@ -40,16 +40,26 @@ angular.module('starter', ['ionic', 'starter.controllers','starter.services'])
     views: {
       'menuContent': {
         templateUrl: 'templates/inicio.html',
-        controller: 'InicioCtrl'
+        controller: 'InicioCtrl',
+        controllerAs:'ini'
       }
     }
   })
-    .state('app.juegos', {
+    .state('app.tabs.juegos', {
       url: '/juegos',
       views: {
         'menuContent': {
           templateUrl: 'templates/juegos.html',
           controller: 'JuegosCtrl'
+        }
+      }
+    })
+    .state('app.tabs', {
+      url: '/tabs',
+      views: {
+        'menuContent': {
+          templateUrl: 'templates/content.html',
+          controller: 'TabsCtrl'
         }
       }
     })
@@ -71,7 +81,7 @@ angular.module('starter', ['ionic', 'starter.controllers','starter.services'])
         }
       }
     })
-    .state('app.consolas', {
+    .state('app.tabs.consolas', {
       url: '/consolas',
       views: {
         'menuContent': {
@@ -107,7 +117,7 @@ angular.module('starter', ['ionic', 'starter.controllers','starter.services'])
         }
       }
     })
-    .state('app.smart', {
+    .state('app.tabs.smart', {
       url: '/smart',
       views: {
         'menuContent': {

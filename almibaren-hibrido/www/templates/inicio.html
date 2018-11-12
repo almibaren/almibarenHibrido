@@ -1,0 +1,19 @@
+<ion-view title="Login" id="page3" style="">
+  <ion-content padding="true" class="has-header">
+     <div w3-include-html="content.html"></div>
+      <ion-slides options="sliderOptions" slider="swiper">
+        <ion-slide ng-repeat="producto in ini.productos">
+            <ion-card>
+                <ion-card-header>
+                     <img src='{{producto.imagen}}'>
+                </ion-card-header>
+                <ion-card-content>
+                     <h2>{{producto.nombre}}</h2>
+                     {{producto.descripcion}}
+                </ion-card-content>
+            </ion-card>
+        <ion-slide>
+    </ion-slides>
+    
+  </ion-content>
+</ion-view>
