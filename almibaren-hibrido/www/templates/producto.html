@@ -1,0 +1,20 @@
+  <ion-view title="Login" id="page3" style="">
+    <ion-content padding="true" class="has-header">
+      <ion-card class="card" style="top-margin:1000px;">
+        <h1 style="text-align:center;">{{pro.nombre}}</h1>
+        <div class="" style="align:center;">
+        <ion-card-content>
+        <img src="{{pro.url}}" style="width:50%;height:50%;margin-left:25%;align:center;">
+        <br>
+        <a style="center">
+
+          </a>
+          <h3 style="text-align:center;">{{pro.precio}}€ </h3>   <h2 style="margin-left:80%;;">{{pro.descuento}}%</h2>
+        </ion-card-content>
+      </div>
+      </ion-card>
+      <div class="">
+        <button class="button button-positive button-block"  ng-click="comprar()"><h4>Comprar</h4></button>
+        <button class="button button-positive button-block"  ng-click="comprar()">Añadir al carrito</button>
+    </ion-content>
+  </ion-view>

@@ -1,19 +1,41 @@
 <ion-view title="Login" id="page3" style="">
   <ion-content padding="true" class="has-header">
-     <div w3-include-html="content.html"></div>
-      <ion-slides options="sliderOptions" slider="swiper">
-        <ion-slide ng-repeat="producto in ini.productos">
-            <ion-card>
-                <ion-card-header>
-                     <img src='{{producto.imagen}}'>
-                </ion-card-header>
-                <ion-card-content>
-                     <h2>{{producto.nombre}}</h2>
-                     {{producto.descripcion}}
-                </ion-card-content>
-            </ion-card>
-        <ion-slide>
-    </ion-slides>
-    
+    <ion-grid >
+      <ion-scroll direction="x" class="wide-as-needed">
+        <ion-card ng-repeat="p in ini.productosPopu" class="card" style="height:100%;width:100%;" >
+            <ion-card-content ng-click="selecciona({{p}})">
+              <img src="{{p.url}}" style="width:10%;height:10%;">
+              <a style="center">
+                {{p.nombre}}
+              </a>
+              {{p.precio}}€    {{p.descuento}}%
+            </ion-card-content>
+        </ion-card>
+        <ion-card ng-repeat="p in ini.productosPopu">
+            <ion-card-content>
+              <img src="{{p.url}}" style="width:10%;height:10%;">
+              <a style="center">
+                {{p.nombre}}
+              </a>
+            </ion-card-content>
+        </ion-card>
+        <ion-card ng-repeat="p in ini.productosPopu">
+            <ion-card-content>
+              <img src="{{p.url}}" style="width:10%;height:10%;">
+              <a style="center">
+                {{p.nombre}}
+              </a>
+            </ion-card-content>
+        </ion-card>
+        <ion-card ng-repeat="p in ini.productosPopu">
+            <ion-card-content>
+              <img src="{{p.url}}" style="width:10%;height:10%;">
+              <a style="center">
+                {{p.nombre}}
+              </a>
+            </ion-card-content>
+        </ion-card>
+      </ion-scroll>
+    </ion-grid>
   </ion-content>
 </ion-view>

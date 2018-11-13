@@ -126,6 +126,15 @@ angular.module('starter', ['ionic', 'starter.controllers','starter.services'])
         }
       }
     })
+    .state('app.producto', {
+      url: '/producto',
+      views: {
+        'menuContent': {
+          templateUrl: 'templates/producto.html',
+          controller: 'ProductoCtrl'
+        }
+      }
+    })
     .state('app.ubicacion', {
       url: '/ubicacion',
       views: {

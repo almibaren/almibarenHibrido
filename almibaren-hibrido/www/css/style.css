@@ -1,1 +1,11 @@
-/* Empty. Add your own CSS if you like */
+.wide-as-needed {
+  overflow: scroll;
+  white-space: nowrap;
+}
+.card {
+  box-shadow:1px;
+}
+.imagen{
+  width:80%;
+  height:80%;
+}
