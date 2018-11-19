@@ -1,18 +1,15 @@
 <ion-view title="Login" id="page3" style="">
   <ion-content padding="true" class="has-header">
-    <div class="card" ng-repeat="p in ca.productos">
-      <br><br>
-      <h3 class="nombre">  {{p.producto.nombre}}</h3>
-      <div class="imagen">
-        <img src="{{p.producto.url}}" alt="" style="width: 50%;height: 50%;">
-      </div>
-      <br><br>
-      <div class="nombre">
-        <a class="precio">({{p.producto.precio}})</a><b class="descuento">{{p.producto.calculado}}€</b>
-      </div>
-      <div style="float:right;">
-        <input type="image" ng-click="borrar({{p}})" style="width:20%;height: 20%;float:right" src="https://png2.kisspng.com/20180402/krq/kisspng-red-x-letter-computer-icons-red-x-5ac2fb75b18a39.2414215415227277977272.png" alt="">
-      </div>
+    <ion-card ng-repeat="p in ca.productos">
+      <h1 style="text-align:center;">{{p.producto.nombre}}</h1>
+      <input type="image" name="button" ng-click="borrar({{p}})" style="float:right;width:10%" src="http://www.clker.com/cliparts/N/8/h/O/7/G/black-cross-md.png"></input>
+      <div>
+      <ion-card-content style="align:center;">
+        <img src="{{p.producto.url}}" style="width:30%;height:250px;">
+        <h3 style="text-align:center;">{{p.producto.precio}}€ </h3>
+        <h2 style="margin-left:80%;;">{{p.producto.calculado}}€</h2>
+      </ion-card-content>
     </div>
+    </ion-card>
   </ion-content>
 </ion-view>

@@ -7,6 +7,21 @@
 .card {
   display: inline-block;
   width: 30%;
-  height: 170px;
+  height:11em;
   padding: 5px;
+}
+.cardJ {
+  width: 100%;
+  align-items: center;
+  padding: 5px;
+
+}
+.imagenes{
+  display: inline-block;
+}
+.img{
+  width: 10%;
+}
+.carrito{
+  width: 100%;
 }
