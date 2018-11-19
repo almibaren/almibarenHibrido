@@ -1,8 +1,16 @@
 angular.module('starter.controllers')
 
-.controller('ProductoCtrl',['$scope','$rootScope','$state','$ionicHistory', function($scope,$rootScope,$state,$ionicHistory) {
+.controller('ProductoCtrl',['$scope','$rootScope','$state','$ionicHistory','ProductoServicio', function($scope,$rootScope,$state,$ionicHistory,ProductoServicio) {
   var _this=this;
   $scope.pro=JSON.parse(localStorage.getItem("sele"));
+  console.log($scope.pro.id);
+  ProductoServicio.obtenerProducto($scope.pro.id).then(function(response){
+    $scope.pro=response.data;
+    console.log(response.data.url.url1);
+    $scope.ur=response.data.url.url1;
+  });
+
+
   $scope.carrito = function(sele){
     var n=JSON.parse(localStorage.getItem("carr"));
     if(localStorage.getItem("carr")=== null){
@@ -26,5 +34,8 @@ angular.module('starter.controllers')
     localStorage.setItem("carr", JSON.stringify(n));
     //localStorage.removeItem("carr");
     $state.go('app.carrito', {reload: true});
+  }
+  $scope.cambiar=function(sele){
+    $scope.ur=sele;
   }
 }])

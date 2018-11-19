@@ -4,9 +4,16 @@
         <h1 style="text-align:center;">{{pro.nombre}}</h1>
         <div class="" style="align:center;">
         <ion-card-content>
-        <img src="{{pro.url}}" style="width:50%;height:50%;margin-left:25%;align:center;">
+          <img src="{{ur}}" style="width:100%;height:250px;">
+          <div class="imagenes">
+            <img src="{{pro.url.url1}}" class="img" ng-click="cambiar(pro.url.url1)" >
+            <img src="{{pro.url.url2}}" class="img" ng-click="cambiar(pro.url.url2)" >
+            <img src="{{pro.url.url3}}" class="img" ng-click="cambiar(pro.url.url3)" >
+            <img src="{{pro.url.url4}}" class="img" ng-click="cambiar(pro.url.url4)" >
+          </div>
         <br>
-          <h3 style="text-align:center;">{{pro.precio}}€ </h3>   <h2 style="margin-left:80%;;">{{pro.descuento}}%</h2>
+          <h3 style="text-align:center;">{{pro.precio}}€ </h3>
+           <h2 style="margin-left:80%;;">{{pro.descuento}}%</h2>
         </ion-card-content>
       </div>
       </ion-card>
