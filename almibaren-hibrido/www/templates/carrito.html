@@ -1,0 +1,18 @@
+<ion-view title="Login" id="page3" style="">
+  <ion-content padding="true" class="has-header">
+    <div class="card" ng-repeat="p in ca.productos">
+      <br><br>
+      <h3 class="nombre">  {{p.producto.nombre}}</h3>
+      <div class="imagen">
+        <img src="{{p.producto.url}}" alt="" style="width: 50%;height: 50%;">
+      </div>
+      <br><br>
+      <div class="nombre">
+        <a class="precio">({{p.producto.precio}})</a><b class="descuento">{{p.producto.calculado}}€</b>
+      </div>
+      <div style="float:right;">
+        <input type="image" ng-click="borrar({{p}})" style="width:20%;height: 20%;float:right" src="https://png2.kisspng.com/20180402/krq/kisspng-red-x-letter-computer-icons-red-x-5ac2fb75b18a39.2414215415227277977272.png" alt="">
+      </div>
+    </div>
+  </ion-content>
+</ion-view>

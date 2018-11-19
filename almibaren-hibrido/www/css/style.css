@@ -1,11 +1,12 @@
-.wide-as-needed {
-  overflow: scroll;
+
+.scrolling-wrapper {
+  overflow-x: scroll;
+  overflow-y: hidden;
   white-space: nowrap;
 }
 .card {
-  box-shadow:1px;
-}
-.imagen{
-  width:80%;
-  height:80%;
+  display: inline-block;
+  width: 30%;
+  height: 170px;
+  padding: 5px;
 }

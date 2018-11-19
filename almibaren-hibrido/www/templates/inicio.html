@@ -1,41 +1,36 @@
 <ion-view title="Login" id="page3" style="">
   <ion-content padding="true" class="has-header">
-    <ion-grid >
-      <ion-scroll direction="x" class="wide-as-needed">
-        <ion-card ng-repeat="p in ini.productosPopu" class="card" style="height:100%;width:100%;" >
-            <ion-card-content ng-click="selecciona({{p}})">
-              <img src="{{p.url}}" style="width:10%;height:10%;">
-              <a style="center">
-                {{p.nombre}}
-              </a>
-              {{p.precio}}€    {{p.descuento}}%
-            </ion-card-content>
-        </ion-card>
-        <ion-card ng-repeat="p in ini.productosPopu">
-            <ion-card-content>
-              <img src="{{p.url}}" style="width:10%;height:10%;">
-              <a style="center">
-                {{p.nombre}}
-              </a>
-            </ion-card-content>
-        </ion-card>
-        <ion-card ng-repeat="p in ini.productosPopu">
-            <ion-card-content>
-              <img src="{{p.url}}" style="width:10%;height:10%;">
-              <a style="center">
-                {{p.nombre}}
-              </a>
-            </ion-card-content>
-        </ion-card>
-        <ion-card ng-repeat="p in ini.productosPopu">
-            <ion-card-content>
-              <img src="{{p.url}}" style="width:10%;height:10%;">
-              <a style="center">
-                {{p.nombre}}
-              </a>
-            </ion-card-content>
-        </ion-card>
-      </ion-scroll>
-    </ion-grid>
+    <h1>Mas populares</h1>
+      <div class="scrolling-wrapper">
+        <div class="card" ng-repeat="p in ini.productosPopu" ng-click="selecciona({{p}})">
+          <div flex>{{p.nombre}}</div>
+          <div flex><img src="{{p.url}}" style="width:100%;height:auto;"></div>
+          <div flex style="bottom:0;">{{p.precio}}€    {{p.descuento}}%</div>
+        </div>
+      </div>
+      <h1>Recomendados</h1>
+        <div class="scrolling-wrapper">
+          <div class="card" ng-repeat="p in ini.productosReco" ng-click="selecciona({{p}})">
+            <div flex>{{p.nombre}}</div>
+            <div flex><img src="{{p.url}}" style="width:100%;height:auto;"></div>
+            <div flex style="bottom:0;">{{p.precio}}€    {{p.descuento}}%</div>
+          </div>
+        </div>
+        <h1>Mejor valorados</h1>
+          <div class="scrolling-wrapper">
+            <div class="card" ng-repeat="p in ini.productosValo" ng-click="selecciona({{p}})">
+              <div flex>{{p.nombre}}</div>
+              <div flex><img src="{{p.url}}" style="width:100%;height:auto;"></div>
+              <div flex style="bottom:0;">{{p.precio}}€    {{p.descuento}}%</div>
+            </div>
+          </div>
+          <h1>Ofertas</h1>
+            <div class="scrolling-wrapper">
+              <div class="card" ng-repeat="p in ini.productosOfer" ng-click="selecciona({{p}})">
+                <div flex>{{p.nombre}}</div>
+                <div flex><img src="{{p.url}}" style="width:100%;height:auto;"></div>
+                <div flex style="bottom:0;">{{p.precio}}€    {{p.descuento}}%</div>
+              </div>
+            </div>
   </ion-content>
 </ion-view>

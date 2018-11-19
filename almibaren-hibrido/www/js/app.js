@@ -5,7 +5,6 @@
 // the 2nd parameter is an array of 'requires'
 // 'starter.controllers' is found in controllers.js
 angular.module('starter', ['ionic', 'starter.controllers','starter.services'])
-
 .run(function($ionicPlatform) {
   $ionicPlatform.ready(function() {
     // Hide the accessory bar by default (remove this to show the accessory bar above the keyboard
@@ -132,6 +131,16 @@ angular.module('starter', ['ionic', 'starter.controllers','starter.services'])
         'menuContent': {
           templateUrl: 'templates/producto.html',
           controller: 'ProductoCtrl'
+        }
+      }
+    })
+    .state('app.carrito', {
+      url: '/carrito',
+      views: {
+        'menuContent': {
+          templateUrl: 'templates/carrito.html',
+          controller: 'CarritoCtrl',
+          controllerAs: 'ca'
         }
       }
     })

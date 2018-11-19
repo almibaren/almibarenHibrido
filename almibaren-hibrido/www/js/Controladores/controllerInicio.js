@@ -3,9 +3,11 @@ angular.module('starter.controllers')
 .controller('InicioCtrl',['$scope','InicioServicio','$state', function($scope,InicioServicio,$state) {
   var _this=this;
     InicioServicio.masPopulares().then(function(response){
-      _this.productosPopu=response.data[0];
-      _this.productosReco=response.data[1];
-      console.log(response.data[0]);
+      _this.productosPopu=response.data.populares;
+      _this.productosReco=response.data.recomendados;
+      _this.productosValo=response.data.valorados;
+      _this.productosOfer=response.data.ofertas;
+      console.log(response.data);
     });
     $scope.selecciona=function(seleccionado){
       console.log(seleccionado.nombre);
