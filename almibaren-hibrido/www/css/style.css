@@ -31,3 +31,9 @@
   left:37.5%;
   width: 25%;
 }
+.flecha{
+  position: absolute;
+  right: 50px;
+  bottom: 50px;
+  width:20%;
+}
