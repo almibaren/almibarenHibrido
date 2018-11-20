@@ -7,11 +7,11 @@ angular.module('starter.controllers')
     console.log($scope.user);
     var user=$scope.user;
     if (user.pass==user.pass2 && user.dni!="" && user.nombre!="" && user.apellido1!="" && user.apellido2!="" && user.correo!="" && user.usuario!="" && user.pass!="" && user.url!="") {
-      /*RegistrarServicio.regi($scope.user).then(function(response){
+      RegistrarServicio.regi($scope.user).then(function(response){
         console.log(response);
         alert("¡Usuario registrado con exito!");
         $state.go('app.login', {reload: true});
-      })*/
+      })
       console.log("entra");
     }else{
       alert("Asegurese de que ha rellenado todos los campos y que pass y pass2 sean iguales")
