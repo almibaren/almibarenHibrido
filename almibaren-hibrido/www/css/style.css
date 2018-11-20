@@ -25,3 +25,9 @@
 .carrito{
   width: 100%;
 }
+.footer {
+  position: relative;
+  bottom: 0px;
+  left:37.5%;
+  width: 25%;
+}

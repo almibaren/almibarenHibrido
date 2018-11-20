@@ -147,6 +147,16 @@ angular.module('starter', ['ionic', 'starter.controllers','starter.services'])
         }
       }
     })
+    .state('app.cerrar', {
+      url: '/cerrar',
+      views: {
+        'menuContent': {
+          templateUrl: 'templates/cerrar.html',
+          controller: 'CerrarCtrl',
+          controllerAs: 'ce'
+        }
+      }
+    })
     .state('app.ubicacion', {
       url: '/ubicacion',
       views: {
