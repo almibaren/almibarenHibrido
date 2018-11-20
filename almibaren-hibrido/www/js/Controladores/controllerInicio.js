@@ -12,9 +12,9 @@ angular.module('starter.controllers')
     });
 
     $scope.selecciona=function(seleccionado){
-      console.log(seleccionado.nombre);
       localStorage.setItem("sele", JSON.stringify(seleccionado));
       $state.go('app.producto', {reload: true});
+      $rootScope.borrarCache();
       return;
     }
 }])

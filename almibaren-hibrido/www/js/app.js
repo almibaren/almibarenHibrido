@@ -87,7 +87,8 @@ angular.module('starter', ['ionic', 'starter.controllers','starter.services'])
       views: {
         'menuContent': {
           templateUrl: 'templates/consolas.html',
-          controller: 'ConsolasCtrl'
+          controller: 'ConsolasCtrl',
+          controllerAs: 'co'
         }
       }
     })
@@ -123,7 +124,8 @@ angular.module('starter', ['ionic', 'starter.controllers','starter.services'])
       views: {
         'menuContent': {
           templateUrl: 'templates/smart.html',
-          controller: 'SmartCtrl'
+          controller: 'SmartCtrl',
+          controllerAs: 'sm'
         }
       }
     })
@@ -154,6 +156,16 @@ angular.module('starter', ['ionic', 'starter.controllers','starter.services'])
           templateUrl: 'templates/cerrar.html',
           controller: 'CerrarCtrl',
           controllerAs: 'ce'
+        }
+      }
+    })
+    .state('app.registrar', {
+      url: '/registrar',
+      views: {
+        'menuContent': {
+          templateUrl: 'templates/registrar.html',
+          controller: 'RegistrarCtrl',
+          controllerAs: 're'
         }
       }
     })

@@ -7,8 +7,6 @@ angular.module('starter.controllers')
     $scope.pro=response.data;
     $scope.ur=response.data.url.url1;
   });
-
-
   $scope.com = function(sele){
     var n=JSON.parse(localStorage.getItem("carr"));
     if(localStorage.getItem("carr")=== null){

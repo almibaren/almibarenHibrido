@@ -1,6 +1,6 @@
 <ion-view title="Juegos" id="page3" style="">
   <ion-content padding="true" class="has-header">
-      <div class="cardJ" ng-repeat="ju in ju.juegos" ng-click="" align="center">
+      <div class="cardJ" ng-repeat="ju in ju.juegos" align="center" ng-click="sele({{ju}})">
         <div flex><h3>{{ju.nombre}}</h3></div>
         <div flex><img src="{{ju.url}}" style="width:10em;"></div>
         <div flex >{{ju.precio}}€    {{ju.descuento}}%</div>

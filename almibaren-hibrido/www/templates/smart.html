@@ -1,3 +1,9 @@
-<div style="margin-top:5%;">
-
-</div>
+<ion-view title="Juegos" id="page3" style="">
+  <ion-content padding="true" class="has-header">
+      <div class="cardJ" ng-repeat="sm in sm.smart" ng-click="sele({{sm}})" align="center">
+        <div flex><h3>{{sm.nombre}}</h3></div>
+        <div flex><img src="{{sm.url}}" style="width:10em;"></div>
+        <div flex >{{sm.precio}}€    {{sm.descuento}}%</div>
+    </div>
+  </ion-content>
+</ion-view>

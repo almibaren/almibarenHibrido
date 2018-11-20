@@ -4,7 +4,5 @@ angular.module('starter.controllers')
   var _this=this;
     JuegosServicio.obtener().then(function(response){
       _this.juegos=response.data;
-      
-      console.log(response.data);
     });
 }])

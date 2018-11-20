@@ -13,6 +13,12 @@ angular.module('starter.controllers', [])
     $ionicHistory.clearCache();
     $ionicHistory.clearHistory();
   }
+  $rootScope.sele=function(pro){
+    localStorage.setItem("sele", JSON.stringify(pro));
+    $state.go('app.producto', {reload: true});
+    $rootScope.borrarCache();
+    return;
+  }
 }])
 .controller('TabsCtrl',['$scope', function($scope) {
 
