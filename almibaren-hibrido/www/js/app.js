@@ -78,7 +78,8 @@ angular.module('starter', ['ionic', 'starter.controllers','starter.services'])
       views: {
         'menuContent': {
           templateUrl: 'templates/ajustes.html',
-          controller: 'AjustesCtrl'
+          controller: 'AjustesCtrl',
+          controllerAs: 'aj'
         }
       }
     })

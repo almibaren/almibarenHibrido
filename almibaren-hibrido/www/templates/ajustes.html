@@ -20,14 +20,14 @@
       </label>
       <label class="item item-input" id="login-input4">
         <span class="input-label" >Correo</span>
-        <input type="text" placeholder="" ng-model="user.mail">
+        <input type="text" placeholder="" ng-model="user.email">
       </label>
       <label class="item item-input" id="login-input4">
         <span class="input-label" >user</span>
-        <input type="text" placeholder="" ng-model="user.usuario">
+        <input type="text" placeholder="" ng-model="user.user" disabled>
       </label>
       <label class="item item-input" id="login-input4">
-        <span class="input-label" >Pass</span>
+        <span class="input-label" >Pass vieja</span>
         <input type="text" placeholder="" ng-model="user.passVieja">
       </label>
       <label class="item item-input" id="login-input4">
@@ -40,13 +40,24 @@
       </label>
       <label class="item item-input" id="login-input4">
         <span class="input-label" >URL imagen</span>
-        <input type="text" placeholder="" ng-model="user.url">
+        <input type="text" placeholder="" ng-model="user.imagen">
       </label>
     </form>
     <button id="login-button2" class="button button-positive button-block" ng-click="modificar()">Actualizar</button>
 
 
     <h2 style="text-align:center;">Compras realizadas</h2>
+    <label class="item item-input" id="login-input4">
+      <span class="input-label" >Numero de la compra</span>
+      <select class="sele" ng-model="com" ng-change="combo()" ng-options="tr as tr.idTransaccion for tr in aj.transa">
+        <option value="" ng-repeat="tr in usuario.transacciones.compras">{{tr.idTransaccion}}</option>
+        <option value="" ng-repeat="tr in usuario.transacciones.compras">ds</option>
+        <option value="" ng-repeat="tr in usuario.transacciones.compras">sd</option>
+      </select>
+    </label>
+    <div class="">
+
+    </div>
 
     <h2 style="text-align:center;">Reparaciones</h2>
   </ion-content>

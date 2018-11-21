@@ -1,12 +1,11 @@
 angular.module('starter.controllers')
 
-.controller('AjustesCtrl', function($scope) {
-  $scope.playlists = [
-    { title: 'Reggae', id: 1 },
-    { title: 'Chill', id: 2 },
-    { title: 'Dubstep', id: 3 },
-    { title: 'Indie', id: 4 },
-    { title: 'Rap', id: 5 },
-    { title: 'Cowbell', id: 6 }
-  ];
-})
+.controller('AjustesCtrl',['$rootScope','$scope', function($rootScope,$scope) {
+  console.log($rootScope.usuario);
+  $scope.transa=$rootScope.usuario.transacciones.compras;
+  console.log($scope.transa[0].idTransaccion);
+  $scope.com="";
+  $scope.combo=function(){
+    console.log("a");
+  }
+}])

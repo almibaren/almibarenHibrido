@@ -1,8 +1,8 @@
 angular.module('starter.controllers')
 
 .controller('CerrarCtrl',['$rootScope','$scope','$state', function($rootScope,$scope,$state) {
-  console.log("aa");
   localStorage.removeItem("idUsuario");
+  $rootScope.user="a";
   $rootScope.registrado=false;
   $scope.$on('app.menu', function() {
     location.reload();
