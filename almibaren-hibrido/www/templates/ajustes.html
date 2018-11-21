@@ -1,0 +1,53 @@
+<ion-view cache-view="false" title="Login" id="page3" style="">
+  <ion-content padding="true" class="has-header">
+    <h2 style="text-align:center;">Modificar usuario</h2>
+    <form id="login-form4" class="list">
+      <label class="item item-input" id="login-input4">
+        <span class="input-label" >DNI</span>
+        <input type="text" placeholder="" ng-model="user.dni" disabled>
+      </label>
+      <label class="item item-input" id="login-input4">
+        <span class="input-label" >Nombre</span>
+        <input type="text" placeholder="" ng-model="user.nombre">
+      </label>
+      <label class="item item-input" id="login-input4">
+        <span class="input-label" >Apellido 1</span>
+        <input type="text" placeholder="" ng-model="user.apellido1">
+      </label>
+      <label class="item item-input" id="login-input4">
+        <span class="input-label" >Apellido 2</span>
+        <input type="text" placeholder="" ng-model="user.apellido2">
+      </label>
+      <label class="item item-input" id="login-input4">
+        <span class="input-label" >Correo</span>
+        <input type="text" placeholder="" ng-model="user.mail">
+      </label>
+      <label class="item item-input" id="login-input4">
+        <span class="input-label" >user</span>
+        <input type="text" placeholder="" ng-model="user.usuario">
+      </label>
+      <label class="item item-input" id="login-input4">
+        <span class="input-label" >Pass</span>
+        <input type="text" placeholder="" ng-model="user.passVieja">
+      </label>
+      <label class="item item-input" id="login-input4">
+        <span class="input-label" >Pass</span>
+        <input type="text" placeholder="" ng-model="user.pass">
+      </label>
+      <label class="item item-input" id="login-input4">
+        <span class="input-label" >Repetir Pass</span>
+        <input type="text" placeholder="" ng-model="user.pass2">
+      </label>
+      <label class="item item-input" id="login-input4">
+        <span class="input-label" >URL imagen</span>
+        <input type="text" placeholder="" ng-model="user.url">
+      </label>
+    </form>
+    <button id="login-button2" class="button button-positive button-block" ng-click="modificar()">Actualizar</button>
+
+
+    <h2 style="text-align:center;">Compras realizadas</h2>
+
+    <h2 style="text-align:center;">Reparaciones</h2>
+  </ion-content>
+</ion-view>

@@ -12,7 +12,6 @@ angular.module('starter.controllers')
         alert("¡Usuario registrado con exito!");
         $state.go('app.login', {reload: true});
       })
-      console.log("entra");
     }else{
       alert("Asegurese de que ha rellenado todos los campos y que pass y pass2 sean iguales")
     }

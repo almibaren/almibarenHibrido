@@ -1,0 +1,26 @@
+<ion-view cache-view="false" title="Servicio Tecnico" id="page3" style="">
+  <ion-content padding="true" class="has-header">
+    <form id="login-form4" class="list">
+
+      <label class="item item-input" id="login-input4">
+        <span class="input-label" >Producto</span>
+        <select class="sele" name="">
+          <option value="" ng-repeat="pro in se.productos">{{pro.nombre}}</option>
+          <option value="" ng-repeat="mo in se.movil">{{mo.nombre}}</option>
+        </select>
+      </label>
+      <label class="item item-input" id="login-input4">
+        <span class="input-label" >Problema</span>
+        <select class="sele" name="">
+          <option value="" ng-repeat="prob in se.prob">{{prob}}</option>
+        </select>
+      </label>
+      <label class="item item-input" id="login-input4">
+        <span class="input-label" >Descripcion</span>
+        <input type="text" placeholder="" ng-model="user.apellido2">
+      </label>
+
+    </form>
+    <button id="login-button2" class="button button-positive button-block" ng-click="modificar()">Enviar</button>
+  </ion-content>
+</ion-view>

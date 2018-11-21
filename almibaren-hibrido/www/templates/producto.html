@@ -1,4 +1,4 @@
-  <ion-view cache-view="false" title="Login" id="page3" style="">
+  <ion-view cache-view="false" title="{{pro.nombre}}" id="page3" style="">
     <ion-content padding="true" class="has-header">
       <ion-card style="top-margin:1000px;">
         <h1 style="text-align:center;">{{pro.nombre}}</h1>
@@ -11,14 +11,33 @@
             <img src="{{pro.url.url3}}" class="img" ng-click="cambiar(pro.url.url3)" >
             <img src="{{pro.url.url4}}" class="img" ng-click="cambiar(pro.url.url4)" >
           </div>
-        <br>
-          <h3 style="text-align:center;">{{pro.precio}}€ </h3>
-           <h2 style="margin-left:80%;;">{{pro.descuento}}%</h2>
+        <h4>Descripcion</h4>
+        <label for="">{{pro.descripcion}}</label>
+        <br><br>
+        <div class="precios">
+          <h2 style="float:left;">Precio: {{cal}}€</h2>
+          <h4 style="float:right;">Des:{{pro.descuento}}%</h4>
+          <h4 style="float:right;margin-right:5%;">Antes:<strike>{{pro.precio}}€</strike> </h4>
+        </div>
         </ion-card-content>
       </div>
       </ion-card>
       <div class="">
         <button class="button button-positive button-block"  ng-click="com({{pro}})"><h4>Comprar</h4></button>
-        <button class="button button-positive button-block"  ng-click="com({{pro}})">Añadir al carrito</button>
+        <button class="button button-positive button-block"  ng-click="ca({{pro}})">Añadir al carrito</button>
+        <br>
+        <h4>Opiniones</h4>
+        <div class="cardOp" ng-repeat="op in pro.opiniones">
+          <div class="">
+            <label style="float:left;"><b>Usuario:  </b>{{op.user}}</label>
+            <label style="float:right;"><b>Valoracion:  </b>{{op.valoracion}}/5</label>
+            <br>
+            <br>
+          </div>
+          <b>Comentario:</b>
+          {{op.comentario}}
+          <br>
+        </div>
+
     </ion-content>
   </ion-view>
