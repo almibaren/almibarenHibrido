@@ -28,7 +28,7 @@
       </label>
       <label class="item item-input" id="login-input4">
         <span class="input-label" >Pass vieja</span>
-        <input type="text" placeholder="" ng-model="user.passVieja">
+        <input type="text" placeholder="" ng-model="passVieja">
       </label>
       <label class="item item-input" id="login-input4">
         <span class="input-label" >Pass</span>
@@ -43,22 +43,32 @@
         <input type="text" placeholder="" ng-model="user.imagen">
       </label>
     </form>
-    <button id="login-button2" class="button button-positive button-block" ng-click="modificar()">Actualizar</button>
-
+    <button id="login-button2" class="button button-positive button-block" ng-click="mod()">Actualizar</button>
 
     <h2 style="text-align:center;">Compras realizadas</h2>
     <label class="item item-input" id="login-input4">
-      <span class="input-label" >Numero de la compra</span>
-      <select class="sele" ng-model="com" ng-change="combo()" ng-options="tr as tr.idTransaccion for tr in aj.transa">
-        <option value="" ng-repeat="tr in usuario.transacciones.compras">{{tr.idTransaccion}}</option>
-        <option value="" ng-repeat="tr in usuario.transacciones.compras">ds</option>
-        <option value="" ng-repeat="tr in usuario.transacciones.compras">sd</option>
-      </select>
+      <span class="input-label" >Fecha de la compra</span>
+      <select class="sele" ng-change="onChange()" ng-model="s" ng-options="tr.fecha for tr in usuario.transacciones.compras track by tr.idTransaccion"></select>
     </label>
-    <div class="">
-
+    <div class="" ng-show="s!=''">
+      <h4>Productos:</h4>
+      <div class="" ng-repeat="p in s.productos">
+        {{p.nombre}}
+      </div>
+      <h4>Precio total:</h4>{{s.precio}}€
     </div>
 
     <h2 style="text-align:center;">Reparaciones</h2>
+    <label class="item item-input" id="login-input4">
+      <span class="input-label" >Fecha de la reparacion</span>
+      <select class="sele" ng-change="onChange()" ng-model="r" ng-options="tr.fecha for tr in usuario.transacciones.reparaciones track by tr.idTransaccion"></select>
+    </label>
+    <div class="" ng-show="r!=''">
+      <h4>Productos:</h4>
+      <div class="" ng-repeat="p in r.productos">
+        {{p.nombre}}
+      </div>
+      <h4>Precio total:</h4>{{r.precio}}€
+    </div>
   </ion-content>
 </ion-view>

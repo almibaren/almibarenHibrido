@@ -3,7 +3,7 @@
       <div class="cardJ" ng-repeat="ju in ju.juegos" align="center" ng-click="sele({{ju}})">
         <div flex><h3>{{ju.nombre}}</h3></div>
         <div flex><img src="{{ju.url}}" style="width:10em;"></div>
-        <div flex >{{ju.precio}}€    {{ju.descuento}}%</div>
+        <div flex >{{ju.precio-ju.precio*ju.descuento/100}}€ </div>
     </div>
   </ion-content>
 </ion-view>

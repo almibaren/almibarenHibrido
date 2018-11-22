@@ -5,7 +5,7 @@
         <div class="card" ng-repeat="p in ini.productosPopu" ng-click="selecciona({{p}})">
           <div flex>{{p.nombre}}</div>
           <div flex><img src="{{p.url}}" style="width:100%;height:auto;"></div>
-          <div flex style="bottom:0;">{{p.precio}}€    {{p.descuento}}%</div>
+          <div flex style="bottom:0;">{{p.precio-p.precio*p.descuento/100}}€</div>
         </div>
       </div>
       <h1>Recomendados</h1>
@@ -13,7 +13,7 @@
           <div class="card" ng-repeat="p in ini.productosReco" ng-click="selecciona({{p}})">
             <div flex>{{p.nombre}}</div>
             <div flex><img src="{{p.url}}" style="width:100%;height:auto;"></div>
-            <div flex style="bottom:0;">{{p.precio}}€    {{p.descuento}}%</div>
+            <div flex style="bottom:0;">{{p.precio-p.precio*p.descuento/100}}€</div>
           </div>
         </div>
         <h1>Mejor valorados</h1>
@@ -21,7 +21,7 @@
             <div class="card" ng-repeat="p in ini.productosValo" ng-click="selecciona({{p}})">
               <div flex>{{p.nombre}}</div>
               <div flex><img src="{{p.url}}" style="width:100%;height:auto;"></div>
-              <div flex style="bottom:0;">{{p.precio}}€    {{p.descuento}}%</div>
+              <div flex style="bottom:0;">{{p.precio-p.precio*p.descuento/100}}€</div>
             </div>
           </div>
           <h1>Ofertas</h1>
@@ -29,7 +29,7 @@
               <div class="card" ng-repeat="p in ini.productosOfer" ng-click="selecciona({{p}})">
                 <div flex>{{p.nombre}}</div>
                 <div flex><img src="{{p.url}}" style="width:100%;height:auto;"></div>
-                <div flex style="bottom:0;">{{p.precio}}€    {{p.descuento}}%</div>
+                <div flex style="bottom:0;">{{p.precio-p.precio*p.descuento/100}}€</div>
               </div>
             </div>
   </ion-content>

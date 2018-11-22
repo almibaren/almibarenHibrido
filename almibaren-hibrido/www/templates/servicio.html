@@ -4,23 +4,23 @@
 
       <label class="item item-input" id="login-input4">
         <span class="input-label" >Producto</span>
-        <select class="sele" name="">
+        <select class="sele" name="" ng-model="producto">
           <option value="" ng-repeat="pro in se.productos">{{pro.nombre}}</option>
           <option value="" ng-repeat="mo in se.movil">{{mo.nombre}}</option>
         </select>
       </label>
       <label class="item item-input" id="login-input4">
         <span class="input-label" >Problema</span>
-        <select class="sele" name="">
+        <select class="sele" name="" ng-model="servicioTecnico.problema">
           <option value="" ng-repeat="prob in se.prob">{{prob}}</option>
         </select>
       </label>
       <label class="item item-input" id="login-input4">
         <span class="input-label" >Descripcion</span>
-        <input type="text" placeholder="" ng-model="user.apellido2">
+        <input type="text" ng-model="servicioTecnico.des">
       </label>
-
+      <button id="login-button2" class="button button-positive button-block" ng-click="tec()">Enviar</button>
     </form>
-    <button id="login-button2" class="button button-positive button-block" ng-click="modificar()">Enviar</button>
+
   </ion-content>
 </ion-view>

@@ -1,6 +1,7 @@
 angular.module('starter.controllers', [])
 
 .controller('AppCtrl',['$state','$scope','$ionicModal','$timeout','$rootScope','$ionicHistory', function($state,$scope, $ionicModal, $timeout,$rootScope,$ionicHistory) {
+  $rootScope.user="";
   $scope.verCarro=function(){
     $state.go('app.carrito', {reload: true});
     return;
